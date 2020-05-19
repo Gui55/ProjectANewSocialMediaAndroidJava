@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="firstSquare">117dp</dimen>
+    <dimen name="squareAround">130dp</dimen>
+    <dimen name="littleMargin">6dp</dimen>
+    <dimen name="firstRadius">5dp</dimen>
+    <dimen name="defaultTextHeight">60dp</dimen>
+
+</resources>
