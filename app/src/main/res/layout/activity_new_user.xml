@@ -28,10 +28,32 @@
     </RelativeLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/defaultTextHeight"
+        android:background="@drawable/border_a"
+        android:hint="Escolha um nome de usuário"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/newUserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/defaultTextHeight"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="112dp"
         android:background="@drawable/border_a"
         android:hint="Escolha um e-mail"
         android:textColorHint="@color/colorPrimaryDark"
@@ -54,7 +76,7 @@
         android:id="@+id/textInputLayout3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/defaultTextHeight"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/border_a"
         android:hint="Escolha uma senha"
         android:textColorHint="@color/colorPrimaryDark"
