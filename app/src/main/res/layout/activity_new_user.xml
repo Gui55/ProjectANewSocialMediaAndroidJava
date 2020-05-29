@@ -5,76 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/paleYellow"
-    tools:context=".ui.view.MainActivity">
+    tools:context=".ui.view.NewUserActivity">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout2"
+        android:id="@+id/relativeLayout"
+        android:layout_marginTop="104dp"
         android:layout_width="@dimen/squareAround"
         android:layout_height="@dimen/squareAround"
-        android:layout_marginTop="104dp"
         android:background="@drawable/border_a"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/loginUserPhoto"
+            android:id="@+id/newUserPhoto"
             android:layout_width="@dimen/firstSquare"
             android:layout_height="@dimen/firstSquare"
             android:layout_marginLeft="@dimen/littleMargin"
             android:layout_marginTop="@dimen/littleMargin"
-            android:src="@drawable/ic_launcher_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:src="@drawable/ic_launcher_background" />
 
     </RelativeLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/loginUserEmail"
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/defaultTextHeight"
+        android:layout_marginTop="36dp"
         android:background="@drawable/border_a"
-        android:hint="E-mail"
+        android:hint="Escolha um e-mail"
         android:textColorHint="@color/colorPrimaryDark"
         app:hintTextColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
-        app:layout_constraintVertical_bias="0.181">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:layout_editor_absoluteX="0dp">
 
         <EditText
-            android:id="@+id/loginEmailText"
+            android:id="@+id/newUserEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="8dp"
             android:textColor="@color/colorPrimaryDark"
-            android:textColorHint="@color/colorPrimaryDark"
-            />
+            android:textColorHint="@color/colorPrimaryDark" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/textInputLayout3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/defaultTextHeight"
+        android:layout_marginTop="28dp"
         android:background="@drawable/border_a"
-        android:hint="Senha"
+        android:hint="Escolha uma senha"
         android:textColorHint="@color/colorPrimaryDark"
         app:hintTextColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginUserEmail"
-        app:layout_constraintVertical_bias="0.098">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        tools:layout_editor_absoluteX="0dp">
 
         <EditText
-            android:id="@+id/loginPasswordText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
@@ -85,30 +73,25 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/createUserButton"
+        android:layout_width="170dp"
         android:layout_height="50dp"
+        android:text="Cadastrar Usuário"
         android:background="@drawable/border_a"
-        android:text="login"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        app:layout_constraintVertical_bias="0.271" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
-    <Button
-        android:id="@+id/newUserButton"
-        android:onClick="goToNewUser"
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:layout_width="50dp"
         android:layout_height="50dp"
+        android:src="@drawable/image_icon"
         android:background="@drawable/border_a"
-        android:text="cadastro"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
