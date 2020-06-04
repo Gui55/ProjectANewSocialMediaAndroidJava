@@ -85,6 +85,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <EditText
+            android:id="@+id/newUserPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
@@ -96,6 +97,7 @@
 
     <Button
         android:id="@+id/createUserButton"
+        android:onClick="createUser"
         android:layout_width="170dp"
         android:layout_height="50dp"
         android:text="Cadastrar Usuário"
@@ -107,6 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
     <ImageButton
+        android:onClick="getGalleryImage"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/image_icon"
