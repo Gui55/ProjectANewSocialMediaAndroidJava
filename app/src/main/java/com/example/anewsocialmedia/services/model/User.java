@@ -1,5 +1,7 @@
 package com.example.anewsocialmedia.services.model;
 
+import android.graphics.Bitmap;
+
 import com.google.firebase.database.Exclude;
 
 public class User {
@@ -8,6 +10,7 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private Bitmap image;
 
     @Exclude
     public String getUid() {
@@ -41,5 +44,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Exclude
+    public Bitmap getImage() {
+        return image;
+    }
+
+    public void setImage(Bitmap image) {
+        this.image = image;
     }
 }

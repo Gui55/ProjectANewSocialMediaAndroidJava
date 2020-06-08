@@ -23,7 +23,7 @@
             android:layout_height="@dimen/firstSquare"
             android:layout_marginLeft="@dimen/littleMargin"
             android:layout_marginTop="@dimen/littleMargin"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/logo" />
 
     </RelativeLayout>
 

@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -78,6 +79,10 @@ public class NewUserActivity extends AppCompatActivity {
     }
 
     public void createUser(View view) {
-        viewModel.createUserInFire(userName.getText().toString(), userEmail.getText().toString(), userPassword.getText().toString());
+
+        BitmapDrawable bd = (BitmapDrawable)newUserPhoto.getDrawable();
+
+        viewModel.createUserInFire(bd.getBitmap(),userName.getText().toString(), userEmail.getText().toString(), userPassword.getText().toString());
+
     }
 }

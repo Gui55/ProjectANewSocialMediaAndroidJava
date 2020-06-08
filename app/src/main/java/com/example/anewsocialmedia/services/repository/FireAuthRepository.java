@@ -1,5 +1,7 @@
 package com.example.anewsocialmedia.services.repository;
 
+import android.graphics.Bitmap;
+
 import com.example.anewsocialmedia.services.model.User;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -12,7 +14,7 @@ public class FireAuthRepository {
         auth = FirebaseAuth.getInstance();
     }
 
-    public void createUserInFirebase(String name, String email, String password, ResultCallback resultCallback){
+    public void createUserInFirebase(Bitmap bitmap, String name, String email, String password, ResultCallback resultCallback){
 
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
 
@@ -23,6 +25,7 @@ public class FireAuthRepository {
                 user.setName(name);
                 user.setEmail(email);
                 user.setPassword(password);
+                user.setImage(bitmap);
 
                 FirebaseDatabaseRefRepository.getInstance().saveInDB(user);
 
