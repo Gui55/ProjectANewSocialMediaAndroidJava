@@ -20,7 +20,7 @@ public class NewUserActivity extends AppCompatActivity {
 
     private final int GALLERY_GET_CODE = 0;
     ImageView newUserPhoto;
-    EditText userEmail, userPassword;
+    EditText userEmail, userPassword, userName;
     NewUserViewModel viewModel;
 
     @Override
@@ -31,6 +31,7 @@ public class NewUserActivity extends AppCompatActivity {
         newUserPhoto = findViewById(R.id.newUserPhoto);
         userEmail = findViewById(R.id.newUserEmail);
         userPassword = findViewById(R.id.newUserPassword);
+        userName = findViewById(R.id.newUserName);
 
         viewModel = new ViewModelProvider(this).get(NewUserViewModel.class);
 
@@ -77,6 +78,6 @@ public class NewUserActivity extends AppCompatActivity {
     }
 
     public void createUser(View view) {
-        viewModel.createUserInFire(userEmail.getText().toString(), userPassword.getText().toString());
+        viewModel.createUserInFire(userName.getText().toString(), userEmail.getText().toString(), userPassword.getText().toString());
     }
 }

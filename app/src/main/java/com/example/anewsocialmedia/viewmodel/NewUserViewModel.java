@@ -8,13 +8,8 @@ public class NewUserViewModel extends ViewModel {
 
     MutableLiveData<String> registerSuccess = new MutableLiveData<>();
 
-    public void createUserInFire(String email, String password){
-        FireAuthRepository.getInstance().createUserInFirebase(email, password, new FireAuthRepository.ResultCallback() {
-            @Override
-            public void newCallback(String b) {
-                registerSuccess.setValue(b);
-            }
-        });
+    public void createUserInFire(String name, String email, String password){
+        FireAuthRepository.getInstance().createUserInFirebase(name, email, password, b -> registerSuccess.setValue(b));
     }
 
     public MutableLiveData<String> getRegisterSuccess() {

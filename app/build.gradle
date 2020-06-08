@@ -69,4 +69,6 @@ dependencies {
     //SDKs do Firebase
     //Auth
     implementation 'com.google.firebase:firebase-auth:19.+'
+    //Database
+    implementation 'com.google.firebase:firebase-database:19.+'
 }

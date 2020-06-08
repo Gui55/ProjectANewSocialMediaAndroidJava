@@ -1,13 +1,6 @@
 package com.example.anewsocialmedia.services.repository;
 
-import android.util.Log;
-
-import androidx.annotation.NonNull;
-import androidx.lifecycle.MutableLiveData;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import com.example.anewsocialmedia.services.model.User;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class FireAuthRepository {
@@ -19,17 +12,23 @@ public class FireAuthRepository {
         auth = FirebaseAuth.getInstance();
     }
 
-    public void createUserInFirebase(String email, String password, ResultCallback resultCallback){
+    public void createUserInFirebase(String name, String email, String password, ResultCallback resultCallback){
 
-        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
 
-                if(task.isComplete()){
-                    resultCallback.newCallback("Success");
-                }
+            if(task.isComplete()){
 
+                User user = new User();
+                user.setUid(auth.getUid());
+                user.setName(name);
+                user.setEmail(email);
+                user.setPassword(password);
+
+                FirebaseDatabaseRefRepository.getInstance().saveInDB(user);
+
+                resultCallback.newCallback("Success");
             }
+
         });
 
     }
