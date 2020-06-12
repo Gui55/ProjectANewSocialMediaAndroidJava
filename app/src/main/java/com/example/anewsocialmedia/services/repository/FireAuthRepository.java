@@ -1,6 +1,9 @@
 package com.example.anewsocialmedia.services.repository;
 
 import android.graphics.Bitmap;
+import android.net.Uri;
+
+import androidx.lifecycle.MutableLiveData;
 
 import com.example.anewsocialmedia.services.model.User;
 import com.google.firebase.auth.FirebaseAuth;

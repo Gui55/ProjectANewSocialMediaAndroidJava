@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 
 import com.example.anewsocialmedia.R;
 import com.example.anewsocialmedia.viewmodel.MainViewModel;
@@ -19,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     MainViewModel viewModel;
 
     //Elementos de UI
-    ImageView userPhoto;
     EditText email, password;
     Button login, newUser;
 
@@ -37,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void assignUIComponentsValues(){
-        userPhoto = findViewById(R.id.loginUserPhoto);
         email = findViewById(R.id.loginEmailText);
         password = findViewById(R.id.loginPasswordText);
         login = findViewById(R.id.loginButton);
