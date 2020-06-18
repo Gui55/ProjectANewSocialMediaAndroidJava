@@ -47,45 +47,4 @@ public class FirebaseDatabaseRefRepository {
         return INSTANCE;
     }
 
-    /*public MutableLiveData<Uri> getUserPicUri(String email){
-
-        MutableLiveData<Uri> theUri = new MutableLiveData<>();
-
-        dbRef.child("usuarios").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                for(DataSnapshot ds: dataSnapshot.getChildren()){
-
-                    User user = ds.getValue(User.class);
-
-                    Log.d("USERS", user.getEmail());
-
-                    if(user.getEmail().equals(email)){
-
-                        Log.d("USERS", ds.getKey()+".jpeg");
-
-                        stRef.child("imagens").child("perfil").child(ds.getKey()+".jpeg").getDownloadUrl()
-                        .addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                theUri.setValue(uri);
-                                Log.d("GOTTEN", uri.toString());
-                            }
-                        });
-                        break;
-                    }
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        Log.d("THEURI", String.valueOf(theUri.getValue()==null));
-        return theUri;
-    }*/
-
 }
