@@ -1,4 +1,4 @@
-package com.example.anewsocialmedia.ui.view;
+package com.example.anewsocialmedia.ui.view.activity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

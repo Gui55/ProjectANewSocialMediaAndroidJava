@@ -11,10 +11,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.view.NewUserActivity"></activity>
-        <activity android:name=".ui.view.SecondActivity"
+        <activity android:name=".ui.view.activity.NewUserActivity"></activity>
+        <activity android:name=".ui.view.activity.SecondActivity"
             android:theme="@style/AppTheme.WithoutActionBar"/>
-        <activity android:name=".ui.view.MainActivity">
+        <activity android:name=".ui.view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

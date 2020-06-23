@@ -1,4 +1,4 @@
-package com.example.anewsocialmedia.ui.view;
+package com.example.anewsocialmedia.ui.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.example.anewsocialmedia.R;
 import com.example.anewsocialmedia.viewmodel.MainViewModel;
